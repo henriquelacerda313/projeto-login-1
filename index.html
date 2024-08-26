@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilos/style.css">
     <link rel="stylesheet" href="estilos/media-query.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <title>projeto login</title>
 </head>
 <body>
@@ -21,16 +22,30 @@
                 Seja bem vindo(a) novamente. Faça login para acessar a sua conta e poder fazer as configurações no seu ambiente !
             </p>
 
-            <form action="login.php" method="post"></form>
+            <form action="login.php" method="post" autocomplete="on"></form> 
+            <!--auto complete on para sugestionar o que voce digitou anteriormenete e para liberar o autocomplete para os inputs-->
 
             <div class="campo">
-                <label for="ilogin">login</label>
-                <input type="email" name="login" id="ilogin" placeholder="digite seu email">
+
+
+                <span class="material-symbols-outlined">person</span> <!--icone sempre em cima do input e com a tag span não mais a ta i-->
+                <input type="email" name="login" id="ilogin" placeholder="digite seu email" autocomplete="email" required maxlength="30">
+                <!--required(obrigatorio)-->
+                <label for="ilogin">LOGIN</label>
+
             </div>
 
             <div class="senha">
-                <label for="isenha">senha</label>
-                <input type="password" name="senha" id="isenha" placeholder="digite sua senha">
+
+                <span class="material-symbols-outlined">vpn_key</span>
+                <input type="password" name="senha" id="isenha" placeholder="digite sua senha" autocomplete="current-password" required minlength="8" maxlength="20">
+                 <!--current password(senha atual)-->
+                <label for="isenha">SENHA</label>
+
+                <p>
+            <input type="submit" value="ENTRAR">
+             <a href="esqueciasenha.html">esqueci a senha</a> <span class="material-symbols-outlined">mail</span>
+                </p>
             </div>
         </div>
     </section>
